@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Output from './output';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Route exact path="/output" component={Output}/>
+    <Route exact path="/" component={App}/>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
